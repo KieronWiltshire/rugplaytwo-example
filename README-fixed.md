@@ -8,7 +8,14 @@ you still need to change the .env file stuff to match the docker services
 below is an example of what it should look like, ... needs to be filled in with your own credentials.
 You also need to setup Google OAuth and set the redirect URI to: `https://my-domain/api/auth/callback/google`
 
-this version doesn't run replicas, so you will need to configure that yourself using nginx proxy in front, with tls/ssl certs or whatever
+this version doesn't run replicas, so you will need to configure that yourself using nginx proxy in front, with tls/ssl certs or whatever.
+
+you also need to ensure that the schemas are run by running the following commands inside the `website` directory, this might need you to temporarily change the host in the postgres .env variable to point to localhost while u run these commands.
+
+- npx drizzle-kit push
+- npx drizzle-kit migrate
+
+enjoy!
 
 ```
 # Rugplay Environment Configuration
