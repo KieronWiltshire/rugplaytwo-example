@@ -5,6 +5,8 @@ docker-compose up --build -d -V
 this will expose rugplay on port 80
 you still need to change the .env file stuff to match the docker services
 
+btw... this also needs to be run behind HTTPS.
+
 below is an example of what it should look like, ... needs to be filled in with your own credentials.
 You also need to setup Google OAuth and set the redirect URI to: `https://my-domain/api/auth/callback/google`
 
